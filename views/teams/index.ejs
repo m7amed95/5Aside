@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>5Aside Teams</h1>
+    <div class="team-view">
+      <div class="position">GoalKeepers</div>
+      <% teams.forEach((team)=> {%> <% if(team.postion === 'GK'){%>
+      <div class="player"><%= team.player%></div>
+      <% } %> <% }); %>
+      <div class="position">Defenders</div>
+      <% teams.forEach((team)=> {%> <% if(team.postion === 'DF'){%>
+      <div class="player"><%= team.player%></div>
+      <% } %> <% }); %>
+      <div class="position">Midfielders</div>
+      <% teams.forEach((team)=> {%> <% if(team.postion === 'MF'){%>
+      <div class="player"><%= team.player%></div>
+      <% } %> <% }); %>
+      <div class="position">Wingers</div>
+      <% teams.forEach((team)=> {%> <% if(team.postion === 'WG'){%>
+      <div class="player"><%= team.player%></div>
+      <% } %> <% }); %>
+      <div class="position">Strikers</div>
+      <% teams.forEach((team)=> {%> <% if(team.postion === 'ST'){%>
+      <div class="player"><%= team.player%></div>
+      <% } %> <% }); %>
+    </div>
+  </body>
+</html>
