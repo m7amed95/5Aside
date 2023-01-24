@@ -6,12 +6,25 @@ const teamSchema = new Schema({
     type: String,
     enum: ["PL", "Laliga", "Bundesliga", "league1"],
   },
-  postion: {
+  GK: {
     type: String,
-    enum: ["GK", "DF", "MF", "WG", "ST"],
+    enum: ["Thibaut Courtois", "Manuel Neuer", "Alisson"],
   },
-  player: {
+  DF: {
     type: String,
+    enum: ["Virgil Van dijk", "Marquinhos", "Ruben Dias"],
+  },
+  MF: {
+    type: String,
+    enum: ["Kevin de Bruyne", "Luka Modric", "Kante"],
+  },
+  WG: {
+    type: String,
+    enum: ["Neymar", "Sadio Mane", "Lionel Messi"],
+  },
+  ST: {
+    type: String,
+    enum: ["Cristiano Ronaldo", "Karim Benzema", "Kylian Mbappe"],
   },
 });
 

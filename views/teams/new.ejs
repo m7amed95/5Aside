@@ -4,10 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Create Team</title>
   </head>
   <body>
     <form action="/teams" method="post">
+      <label>
+        League:
+        <select name="league">
+          <% Team.schema.paths.league.enumValues.forEach((value)=> { %>
+          <option value="<% value %>"><%= value %></option>
+          <% }); %>
+        </select>
+      </label>
+      <label>
+        League:
+        <select name="position">
+          <% Team.schema.paths.position.enumValues.forEach((value)=> { %>
+          <option value="<% value %>"><%= value %></option>
+          <% }); %>
+        </select>
+      </label>
       <label>
         player:
         <select name="GK">
