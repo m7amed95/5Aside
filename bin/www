@@ -5,7 +5,7 @@
  */
 
 var app = require("../server");
-var debug = require("debug")("mongoose-5aside:server");
+var debug = require("debug")("mongoose-5Aside:server");
 var http = require("http");
 
 /**

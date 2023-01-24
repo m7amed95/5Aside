@@ -4,31 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>All Teams</title>
   </head>
   <body>
+    <nav>
+      <a href="/teams">All Teams</a>
+      <a href="/teams/new">Create Team</a>
+    </nav>
     <h1>5Aside Teams</h1>
     <div class="team-view">
-      <div class="position">GoalKeepers</div>
-      <% teams.forEach((team)=> {%> <% if(team.postion === 'GK'){%>
-      <div class="player"><%= team.player%></div>
-      <% } %> <% }); %>
-      <div class="position">Defenders</div>
-      <% teams.forEach((team)=> {%> <% if(team.postion === 'DF'){%>
-      <div class="player"><%= team.player%></div>
-      <% } %> <% }); %>
-      <div class="position">Midfielders</div>
-      <% teams.forEach((team)=> {%> <% if(team.postion === 'MF'){%>
-      <div class="player"><%= team.player%></div>
-      <% } %> <% }); %>
-      <div class="position">Wingers</div>
-      <% teams.forEach((team)=> {%> <% if(team.postion === 'WG'){%>
-      <div class="player"><%= team.player%></div>
-      <% } %> <% }); %>
-      <div class="position">Strikers</div>
-      <% teams.forEach((team)=> {%> <% if(team.postion === 'ST'){%>
-      <div class="player"><%= team.player%></div>
-      <% } %> <% }); %>
+      <% teams.forEach((team) =>{ %>
+      <div class="position"><%= team.position %></div>
+      <div class="player"><%= team.player %></div>
+      <% }); %>
     </div>
   </body>
 </html>
