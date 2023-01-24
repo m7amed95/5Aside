@@ -10,7 +10,7 @@
     <form action="/teams" method="post">
       <label>
         player:
-        <select name="player">
+        <select name="GK">
           <option value="Thibaut Courtois" data-position="GK">
             Thibaut Courtois(GK)
           </option>
@@ -18,11 +18,15 @@
             Manuel Neuer(GK)
           </option>
           <option value="Alisson" data-position="GK">Alisson(GK)</option>
+        </select>
+        <select name="DF">
           <option value="Virgil Van dijk" data-position="DF">
             Virgil Van dijk(DF)
           </option>
           <option value="Marquinhos" data-position="DF">Marquinhos(DF)</option>
           <option value="Ruben Dias" data-position="DF">Ruben Dias(DF)</option>
+        </select>
+        <select name="MF">
           <option value="Kevin de Bruyne" data-position="MF">
             Kevin de Bruyne(MF)
           </option>
@@ -32,11 +36,15 @@
           <option value="N'Golo Kante" data-position="MF">
             N'Golo Kante(MF)
           </option>
+        </select>
+        <select name="WG">
           <option value="Neymar" data-position="WG">Neymar(WG)</option>
           <option value="Sadio Mane" data-position="WG">Sadio Mane(WG)</option>
           <option value="Lionel Messi" data-position="WG">
             Lionel Messi(WG)
           </option>
+        </select>
+        <select name="ST">
           <option value="Cristiano Ronaldo" data-position="ST">
             Cristiano Ronaldo(ST)
           </option>
@@ -48,6 +56,7 @@
           </option>
         </select>
       </label>
+      <input type="submit" value="Create Team" />
     </form>
   </body>
 </html>
