@@ -13,11 +13,31 @@
     </nav>
     <h1>5 Aside Team</h1>
     <div class="team-view">
-      <% teams.forEach((team) =>{ %>
-      <div class="league"><%= team.league %></div>
-      <div class="position"><%= team.position %></div>
-      <div class="player"><%= team.player %></div>
-      <% }); %>
+      <table>
+        <thead>
+          <tr>
+            <th>League</th>
+            <th>Goalkeeper</th>
+            <th>Defender</th>
+            <th>Midfielder</th>
+            <th>Winger</th>
+            <th>Striker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% teams.forEach((team) =>{ %>
+          <tr>
+            <td><%= team.league %></td>
+            <td><%= team.GK %></td>
+            <td><%= team.DF %></td>
+            <td><%= team.MF %></td>
+            <td><%= team.WG %></td>
+            <td><%= team.ST %></td>
+          </tr>
+
+          <% }); %>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>

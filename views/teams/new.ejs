@@ -7,72 +7,57 @@
     <title>Create Team</title>
   </head>
   <body>
-    <form action="/teams" method="post">
-      <label>
-        League:
-        <select name="league">
-          <% Team.schema.paths.league.enumValues.forEach((value)=> { %>
-          <option value="<% value %>"><%= value %></option>
-          <% }); %>
-        </select>
-      </label>
-      <label>
-        League:
-        <select name="position">
-          <% Team.schema.paths.position.enumValues.forEach((value)=> { %>
-          <option value="<% value %>"><%= value %></option>
-          <% }); %>
-        </select>
-      </label>
-      <label>
-        player:
-        <select name="GK">
-          <option value="Thibaut Courtois" data-position="GK">
-            Thibaut Courtois(GK)
-          </option>
-          <option value="Manuel Neuer" data-position="GK">
-            Manuel Neuer(GK)
-          </option>
-          <option value="Alisson" data-position="GK">Alisson(GK)</option>
-        </select>
-        <select name="DF">
-          <option value="Virgil Van dijk" data-position="DF">
-            Virgil Van dijk(DF)
-          </option>
-          <option value="Marquinhos" data-position="DF">Marquinhos(DF)</option>
-          <option value="Ruben Dias" data-position="DF">Ruben Dias(DF)</option>
-        </select>
-        <select name="MF">
-          <option value="Kevin de Bruyne" data-position="MF">
-            Kevin de Bruyne(MF)
-          </option>
-          <option value="Luka Modric" data-position="MF">
-            Luka Modric(MF)
-          </option>
-          <option value="N'Golo Kante" data-position="MF">
-            N'Golo Kante(MF)
-          </option>
-        </select>
-        <select name="WG">
-          <option value="Neymar" data-position="WG">Neymar(WG)</option>
-          <option value="Sadio Mane" data-position="WG">Sadio Mane(WG)</option>
-          <option value="Lionel Messi" data-position="WG">
-            Lionel Messi(WG)
-          </option>
-        </select>
-        <select name="ST">
-          <option value="Cristiano Ronaldo" data-position="ST">
-            Cristiano Ronaldo(ST)
-          </option>
-          <option value="Karim Benzema" data-position="ST">
-            Karim Benzema(ST)
-          </option>
-          <option value="Kylian Mbappe" data-position="ST">
-            Kylian Mbappe(ST)
-          </option>
-        </select>
-      </label>
-      <input type="submit" value="Create Team" />
+    <form method="POST" action="/teams">
+      <label for="league">League:</label>
+      <select name="league" id="league">
+        <option value="PL">Premier League</option>
+        <option value="Laliga">La Liga</option>
+        <option value="Bundesliga">Bundesliga</option>
+        <option value="league1">League 1</option>
+      </select>
+      <br />
+
+      <label for="GK">Goalkeeper:</label>
+      <select name="GK" id="GK">
+        <option value="Thibaut Courtois">Thibaut Courtois</option>
+        <option value="Manuel Neuer">Manuel Neuer</option>
+        <option value="Alisson">Alisson</option>
+      </select>
+      <br />
+
+      <label for="DF">Defenders:</label>
+      <select name="DF" id="DF">
+        <option value="Virgil Van dijk">Virgil Van dijk</option>
+        <option value="Marquinhos">Marquinhos</option>
+        <option value="Ruben Dias">Ruben Dias</option>
+      </select>
+      <br />
+
+      <label for="MF">Midfielders:</label>
+      <select name="MF" id="MF">
+        <option value="Kevin de Bruyne">Kevin de Bruyne</option>
+        <option value="Luka Modric">Luka Modric</option>
+        <option value="Kante">Kante</option>
+      </select>
+      <br />
+
+      <label for="WG">Wingers:</label>
+      <select name="WG" id="WG">
+        <option value="Neymar">Neymar</option>
+        <option value="Sadio Mane">Sadio Mane</option>
+        <option value="Lionel Messi">Lionel Messi</option>
+      </select>
+      <br />
+
+      <label for="ST">Strikers:</label>
+      <select name="ST" id="ST">
+        <option value="Cristiano Ronaldo">Cristiano Ronaldo</option>
+        <option value="Karim Benzema">Karim Benzema</option>
+        <option value="Kylian Mbappe">Kylian Mbappe</option>
+      </select>
+      <br />
+
+      <button type="submit">Create Team</button>
     </form>
   </body>
 </html>
