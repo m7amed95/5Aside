@@ -25,6 +25,6 @@ function create(req, res) {
       return res.redirect("/teams/new");
     }
     console.log(team);
-    res.redirect("/team");
+    res.redirect("/teams");
   });
 }

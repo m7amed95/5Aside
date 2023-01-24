@@ -11,9 +11,10 @@
       <a href="/teams">All Teams</a>
       <a href="/teams/new">Create Team</a>
     </nav>
-    <h1>5Aside Teams</h1>
+    <h1>5 Aside Team</h1>
     <div class="team-view">
       <% teams.forEach((team) =>{ %>
+      <div class="league"><%= team.league %></div>
       <div class="position"><%= team.position %></div>
       <div class="player"><%= team.player %></div>
       <% }); %>
