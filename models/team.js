@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const teamSchema = new Schema({
-  league: {
+  Kit: {
     type: String,
-    enum: ["PL", "Laliga", "Bundesliga", "league1"],
+    enum: ["Red", "Blue", "Green", "White"],
   },
   GK: {
     type: String,
