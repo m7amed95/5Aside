@@ -4,6 +4,7 @@ module.exports = {
   index,
   new: newTeam,
   create,
+  show,
 };
 
 function index(req, res) {
@@ -26,5 +27,11 @@ function create(req, res) {
     }
     console.log(team);
     res.redirect("/teams");
+  });
+}
+
+function show(req, res) {
+  Team.findById(req.params.id, function (err, team) {
+    res.render("teams/show", { title: "team Detail", team });
   });
 }
