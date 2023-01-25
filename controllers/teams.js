@@ -5,6 +5,7 @@ module.exports = {
   new: newTeam,
   create,
   show,
+  delete: deleteTeam,
 };
 
 function index(req, res) {
@@ -34,4 +35,11 @@ function show(req, res) {
   Team.findById(req.params.id, function (err, team) {
     res.render("teams/show", { title: "team Detail", team });
   });
+}
+
+function deleteTeam(req, res) {
+  Team.deleteOne({ _id: req.params.id }, function (err, player) {
+    if (err) console.log(err);
+  });
+  res.redirect("/teams");
 }
