@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Team Detail</h1>
+
+    <p>Kit: <%= team.Kit %></p>
+    <p>Goalkeeper: <%= team.GK %></p>
+    <p>Defense: <%= team.DF %></p>
+    <p>Midfield: <%= team.MF %></p>
+    <p>Wingers: <%= team.WG %></p>
+    <p>Strikers: <%= team.ST %></p>
+
+    <h2>Players</h2>
+    <% team.players.forEach(function(player) { %>
+    <p>Age: <%= player.age %></p>
+    <p>Ethnicity: <%= player.ethnicity %></p>
+    <% }); %>
+  </body>
+</html>
