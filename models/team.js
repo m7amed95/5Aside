@@ -1,6 +1,18 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const playerSchema = new Schema({
+  age: {
+    type: Number,
+
+    min: 20,
+    max: 35,
+  },
+  ethnicity: {
+    type: String,
+  },
+});
+
 const teamSchema = new Schema({
   Kit: {
     type: String,
@@ -26,6 +38,7 @@ const teamSchema = new Schema({
     type: String,
     enum: ["Cristiano Ronaldo", "Karim Benzema", "Kylian Mbappe"],
   },
+  players: [playerSchema],
 });
 
 module.exports = mongoose.model("Team", teamSchema);
