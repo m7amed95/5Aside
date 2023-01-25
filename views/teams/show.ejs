@@ -21,5 +21,13 @@
     <p>Age: <%= player.age %></p>
     <p>Ethnicity: <%= player.ethnicity %></p>
     <% }); %>
+</ul>
+<form action="/teams/<%= team._id %>/players" method="post">
+  <label>Age:</label>
+  <input type="number" name="age" min="20" max="35" />
+  <label>Ethnicity:</label>
+  <input type="text" name="ethnicity" />
+  <input type="submit" value="Add Player" />
+</form>
   </body>
 </html>

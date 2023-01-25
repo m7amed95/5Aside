@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
 const teamsCtrl = require("../controllers/teams");
-const playerCtrl = require("../controllers/players");
+const statisticsCtrl = require("../controllers/statistics");
 
-router.post("/teams/:id/players", playerCtrl.create);
+router.post("/teams/:id/statistics", statisticsCtrl.create);
 
 router.get("/", teamsCtrl.index);
 router.get("/new", teamsCtrl.new);

@@ -6,7 +6,7 @@ module.exports = {
 
 function create(req, res) {
   Team.findById(req.params.id, function (err, team) {
-    team.players.push(req.body);
+    team.statistics.push(req.body);
     team.save(function (err) {
       res.redirect(`/teams/${team._id}`);
     });
