@@ -16,18 +16,22 @@
     <p>Wingers: <%= team.WG %></p>
     <p>Strikers: <%= team.ST %></p>
 
-    <h2>Players</h2>
-    <% team.players.forEach(function(player) { %>
-    <p>Age: <%= player.age %></p>
-    <p>Ethnicity: <%= player.ethnicity %></p>
-    <% }); %>
-</ul>
-<form action="/teams/<%= team._id %>/players" method="post">
-  <label>Age:</label>
-  <input type="number" name="age" min="20" max="35" />
-  <label>Ethnicity:</label>
-  <input type="text" name="ethnicity" />
-  <input type="submit" value="Add Player" />
-</form>
+    <h2>Statistics</h2>
+    <ul>
+      <% team.statistics.forEach(function(statistics) { %>
+      <p>League Position: <%= statistics.leaguePosition %></p>
+      <p>Wins: <%= statistics.wins %></p>
+      <p>Loses: <%= statistics.loses %></p>
+      <% }); %>
+    </ul>
+    <form action="/teams/<%= team._id %>/statistics" method="post">
+      <label>League Position:</label>
+      <input type="number" name="leaguePosition" min="1" max="20" />
+      <label>Wins:</label>
+      <input type="number" name="wins" />
+      <label>Loses:</label>
+      <input type="number" name="loses" />
+      <input type="submit" value="Add Statistics" />
+    </form>
   </body>
 </html>
