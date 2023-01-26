@@ -7,6 +7,7 @@ module.exports = {
   show,
   delete: deleteTeam,
   update: updateTeam,
+  updateform,
 };
 
 function index(req, res) {
@@ -34,6 +35,7 @@ function create(req, res) {
 
 function show(req, res) {
   Team.findById(req.params.id, function (err, team) {
+    console.log(team);
     res.render("teams/show", { title: "team Detail", team });
   });
 }
@@ -46,15 +48,24 @@ function deleteTeam(req, res) {
 }
 
 function updateTeam(req, res) {
-  const id = req.params.id;
-  const updateData = req.body;
   Team.findByIdAndUpdate(
-    id,
-    updateData,
+    {
+      _id: req.params.id,
+      userRecommending: req.user._id,
+    },
+    req.body,
     { new: true },
-    function (err, updateTeam) {
-      if (err) console.log(err);
+    function (err, team) {
+      if (err || !team) return res.redirect("/teams");
+      res.redirect(`/teams/${team._id}`);
     }
   );
-  res.redirect("/teams");
+}
+
+function updateform(req, res) {
+  const id = req.params.id;
+  Team.findById(id, function (err, team) {
+    if (err) console.log(err);
+    res.render("teams/update", { title: "Update Team", team });
+  });
 }

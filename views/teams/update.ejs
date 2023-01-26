@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="post" action="/teams/<%= team._id %>?_method=PUT">
+      <label for="Kit">Kit:</label>
+      <select name="Kit" value="<%= team.Kit %>">
+        <option value="Red">Red</option>
+        <option value="Blue">Blue</option>
+        <option value="Green">Green</option>
+        <option value="White">White</option>
+      </select>
+      <label for="GK">Goalkeeper:</label>
+      <select name="GK" value="<%= team.GK %>">
+        <option value="Thibaut Courtois">Thibaut Courtois</option>
+        <option value="Manuel Neuer">Manuel Neuer</option>
+        <option value="Alisson">Alisson</option>
+      </select>
+      <label for="DF">Defenders:</label>
+      <select name="DF" id="DF">
+        <option value="Virgil Van dijk">Virgil Van dijk</option>
+        <option value="Marquinhos">Marquinhos</option>
+        <option value="Ruben Dias">Ruben Dias</option>
+      </select>
+
+      <label for="MF">Midfielders:</label>
+      <select name="MF" id="MF">
+        <option value="Kevin de Bruyne">Kevin de Bruyne</option>
+        <option value="Luka Modric">Luka Modric</option>
+        <option value="Kante">Kante</option>
+      </select>
+
+      <label for="WG">Wingers:</label>
+      <select name="WG" id="WG">
+        <option value="Neymar">Neymar</option>
+        <option value="Sadio Mane">Sadio Mane</option>
+        <option value="Lionel Messi">Lionel Messi</option>
+      </select>
+
+      <label for="ST">Strikers:</label>
+      <select name="ST" id="ST">
+        <option value="Cristiano Ronaldo">Cristiano Ronaldo</option>
+        <option value="Karim Benzema">Karim Benzema</option>
+        <option value="Kylian Mbappe">Kylian Mbappe</option>
+      </select>
+
+      <input type="submit" value="Update Team" />
+    </form>
+  </body>
+</html>
