@@ -49,15 +49,18 @@ function deleteTeam(req, res) {
 
 function updateTeam(req, res) {
   Team.findByIdAndUpdate(
+    req.params.id,
     {
-      _id: req.params.id,
-      userRecommending: req.user._id,
+      Kit: req.body.Kit,
+      GK: req.body.GK,
+      DF: req.body.DF,
+      MF: req.body.MF,
+      WG: req.body.WG,
+      ST: req.body.ST,
     },
-    req.body,
-    { new: true },
     function (err, team) {
-      if (err || !team) return res.redirect("/teams");
-      res.redirect(`/teams/${team._id}`);
+      if (err) console.log(err);
+      res.redirect("/teams");
     }
   );
 }
