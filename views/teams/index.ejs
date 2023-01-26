@@ -34,9 +34,14 @@
             <td><%= team.WG %></td>
             <td><%= team.ST %></td>
             <td><a href="/teams/<%= team._id %>">Team Details</a></td>
-            <form action="/teams/<%= team._id %>?_method=REMOVE" method="post">
-              <button type="submit">X</button>
-            </form>
+            <td>
+              <form
+                action="/teams/<%= team._id %>?_method=DELETE"
+                method="post"
+              >
+                <button type="submit">X</button>
+              </form>
+            </td>
           </tr>
 
           <% }); %>
