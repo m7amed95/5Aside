@@ -6,6 +6,7 @@ module.exports = {
   create,
   show,
   delete: deleteTeam,
+  update: updateTeam,
 };
 
 function index(req, res) {
@@ -41,5 +42,19 @@ function deleteTeam(req, res) {
   Team.deleteOne({ _id: req.params.id }, function (err, player) {
     if (err) console.log(err);
   });
+  res.redirect("/teams");
+}
+
+function updateTeam(req, res) {
+  const id = req.params.id;
+  const updateData = req.body;
+  Team.findByIdAndUpdate(
+    id,
+    updateData,
+    { new: true },
+    function (err, updateTeam) {
+      if (err) console.log(err);
+    }
+  );
   res.redirect("/teams");
 }
