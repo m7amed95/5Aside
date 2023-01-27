@@ -30,6 +30,7 @@ JavaScript.
 
 Getting Started:
 
+https://fiveaside-teams.herokuapp.com/teams
 
 Next Steps:
 
