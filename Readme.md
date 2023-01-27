@@ -16,28 +16,28 @@ Technologies Used:
 
 JavaScript.
 
-HTML.
+-HTML.
 
-CSS.
+-CSS.
 
-Node.js.
+-Node.js.
 
-Express.
+-Express.
 
-MongoDB.
+-MongoDB.
 
-Mongoose.
+-Mongoose.
 
 Getting Started:
 
 
 Next Steps:
 
-find a api that would list the players out.
+-find a api that would list the players out.
 
-create a league table that would list the teams league spot.
+-create a league table that would list the teams league spot.
 
-add a formation for each team.
+-add a formation for each team.
 
 
 © 2023 GitHub, Inc.
