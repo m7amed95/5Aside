@@ -1,8 +1,120 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f5f5dc;
+}
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 34px;
 }
 
-a {
-  color: #00B7FF;
+.login img {
+  height: 30px;
+}
+
+h1,
+h2 {
+  font-family: "Comic Sans MS", cursive;
+  text-align: center;
+  color: darkblue;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid palegoldenrod;
+  padding: 10px;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+th {
+  background-color: palegoldenrod;
+  color: darkblue;
+  font-weight: bold;
+}
+
+td a {
+  color: darkblue;
+  text-decoration: none;
+}
+
+td a:hover {
+  color: orange;
+}
+
+td button {
+  background-color: orange;
+  color: palegoldenrod;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+nav {
+  background-color: palegoldenrod;
+  font-family: "Comic Sans MS", cursive;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav a {
+  color: darkblue;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+nav a.active {
+  color: orange;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+label {
+  color: darkblue;
+  font-size: 1.2rem;
+  margin: 0 10px 10px 0;
+  width: 100%;
+  text-align: left;
+}
+
+select {
+  width: 200px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid darkblue;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: orange;
+  color: palegoldenrod;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  left: 200px;
+  float: right;
+}
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: darkgreen;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

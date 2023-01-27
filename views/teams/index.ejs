@@ -5,14 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Teams</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
     <nav>
-      <a href="/teams">All Teams</a>
-      <a href="/teams/new">Create Team</a>
+        <% if(user) { %>
+            <a href="/teams" <%- title === 'All Teams' ? 'class="active"' : '' %>>ALL TEAMS</a>
+            <a href="/teams/new" <%- title === 'Create Team ' ? 'class="active"' : '' %>>CREATE TEAM</a>
+      <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <% } %>
+    
     </nav>
     <h1>5 Aside Team</h1>
-    <div class="team-view">
+    
       <table>
         <thead>
           <tr>
@@ -34,6 +41,7 @@
             <td><%= team.WG %></td>
             <td><%= team.ST %></td>
             <td><a href="/teams/<%= team._id %>">Team Details</a></td>
+            <td><a href="/teams/update/<%= team._id %>">Update Team</a></td>
             <td>
               <form
                 action="/teams/<%= team._id %>?_method=DELETE"
@@ -42,8 +50,7 @@
                 <button type="submit">X</button>
               </form>
             </td>
-            <td><a href="/teams/update/<%= team._id %>">Update Team</a></td>
-          </tr>
+        </tr>
 
           <% }); %>
         </tbody>
