@@ -1,5 +1,5 @@
 body {
-  background-color: #f5f5dc;
+  background-color: #ffd662;
 }
 .login {
   display: flex;
@@ -20,6 +20,13 @@ h2 {
   margin-bottom: 20px;
 }
 
+p {
+  color: darkblue;
+  font-size: 1.2rem;
+  margin: 0 10px 10px 0;
+  width: 100%;
+  text-align: left;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -70,11 +77,6 @@ nav a {
   text-decoration: none;
   margin-right: 10px;
   font-size: 1.2rem;
-}
-
-nav a.active {
-  color: orange;
-  font-weight: bold;
 }
 
 form {
